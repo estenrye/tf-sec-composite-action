@@ -33,7 +33,7 @@ jobs:
 Actions used in this repository:
 - [actions/checkout](https://github.com/marketplace/actions/checkout)
 - [elgohr/Github-Release-Action](https://github.com/elgohr/Github-Release-Action)
-- [aquasecurity/tfsec-action]https://github.com/marketplace/actions/tfsec-action)
+- [aquasecurity/tfsec-action](https://github.com/marketplace/actions/tfsec-action)
 - [phish108/autotag-action](https://github.com/marketplace/actions/autotag)
 - [nick-fields/assert-action](https://github.com/marketplace/actions/assert-action)
 - [Ilshidur/action-discord](https://github.com/marketplace/actions/actions-for-discord)
