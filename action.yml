@@ -22,7 +22,7 @@ runs:
       # Tfsec - Security scanner for your Terraform code
       - name: Run Tfsec
         uses: aquasecurity/tfsec-action@v1.0.3
-        working-directory: ${{ inputs.working_directory }}
         with:
           additional_args: --ignore-hcl-errors
-          github_token: ${{ inputs.CI_GITHUB_TOKEN }}
+          working_directory: ${{ inputs.working_directory }}
+          github_token: ${{ inputs.github_token }}
