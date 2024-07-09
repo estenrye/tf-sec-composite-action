@@ -21,12 +21,16 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+## References and Documentation
+
+- [TFSec Checks](https://aquasecurity.github.io/tfsec/latest/checks/aws/api-gateway/enable-access-logging/)
+
 ## Inputs
 
 | Name | Description | Required | Default |
 |------|-------------|----------|---------|
-| `working_directory` | The directory to run `terraform fmt` in. | No | `.` |
-| `github_token` | The GitHub token to use for the `tflint` action. | Yes | N/A |
+| `working_directory` | The directory to exeucte checks in. | No | `.` |
+| `github_token` | The GitHub token to use for the action. | Yes | N/A |
 
 ## Build Integration Pipeline Componenets Used
 
