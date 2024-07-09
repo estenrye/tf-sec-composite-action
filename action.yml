@@ -1,0 +1,28 @@
+name: TF Sec
+author: Esten Rye
+description: Perform static analysis with Tfsec on Terraform files
+branding:
+  icon: check-circle
+  color: blue
+inputs:
+  working_directory:
+    description: 'The directory where Terraform files are located'
+    required: false
+    default: '.'
+  github_token:
+    description: 'The GitHub token to use'
+    required: true
+runs:
+    using: 'composite'
+    steps:
+      # Checkout Repository
+      - name : Check out Git Repository
+        uses: actions/checkout@v4
+
+      # Tfsec - Security scanner for your Terraform code
+      - name: Run Tfsec
+        uses: aquasecurity/tfsec-action@v1.0.3
+        working-directory: ${{ inputs.working_directory }}
+        with:
+          additional_args: --ignore-hcl-errors
+          github_token: ${{ inputs.CI_GITHUB_TOKEN }}
