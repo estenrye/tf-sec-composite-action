@@ -12,6 +12,6 @@ provider "aws" {
   region = "us-west-2"
 }
 
-resource "aws_s3_bucket_public_access_block" "bad_example" {
-    bucket = aws_s3_bucket.example.id
+resource "aws_s3_bucket" "acme_bucket" {
+  bucket = "acme"
 }
